@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Fun Facts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* 👈 Gap of 15px between buttons */
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #animal-image {
+      max-width: 300px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Animal Fun Facts</h1>
+
+  <div class="button-container">
+    <button id="puppy-btn">Puppy</button>
+    <button id="kitten-btn">Kitten</button>
+  </div>
+
+  <img id="animal-image" src="" alt="Animal will appear here" />
+  <p id="animal-fact">Click a button to see a fun fact!</p> <!-- ✅ ID added -->
+
+  <script>
+    const image = document.getElementById('animal-image');
+    const fact = document.getElementById('animal-fact');
+
+    const animals = {
+      puppy: {
+        img: 'https://place-puppy.com/300x300',
+        fact: 'Puppies love to nap — they can sleep 18-20 hours a day!'
+      },
+      kitten: {
+        img: 'https://placekitten.com/300/300',
+        fact: 'Kittens begin dreaming at just one week old.'
+      }
+    };
+
+    document.getElementById('puppy-btn').addEventListener('click', () => {
+      image.src = animals.puppy.img;
+      fact.textContent = animals.puppy.fact;
+    });
+
+    document.getElementById('kitten-btn').addEventListener('click', () => {
+      image.src = animals.kitten.img;
+      fact.textContent = animals.kitten.fact;
+    });
+  </script>
+
+</body>
+</html>

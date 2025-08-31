@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Performace Of Code</h1>
+    <script>
+
+         const t1 = performance.now();
+        for(let i=0; i<100; i++){
+            console.log(i);
+        }
+        const t2 = performance.now();
+
+        console.log("this is took" + (t2-t1) + "ms"); 
+
+        //to increase the performance we use --> document fragment
+        //optimize the bit
+        const t3 = performance.now();
+        let fragmant = document.createDocumentFragment();
+        for(let i=0; i<=100; i++){
+            let element = document.createElement('p');
+            element.textContent = 'this is para' + i;
+
+            fragmant.appendChild(element);
+        }
+        document.body.appendChild(fragmant);
+        const t4 = performance.now();
+
+        console.log("This took" + (t4-t3) + "ms");
+    </script>
+</body>
+</html>

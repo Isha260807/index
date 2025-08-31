@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>difference between all of the innerHtml, innerText, textcontent</h1>
+
+    <p id="myP">   This element has extra <b>spacing</b> spacing   and contains <span>a span element</span>.
+    </p>
+
+    <button onclick="getinnerHtml()">get InnerHtml</button>
+    <button onclick="getinnerText()">get innerText</button>
+    <button onclick="gettextContent()">get textContent</button>
+
+    <pre id="demo"></pre>
+
+    <script>
+        function getinnerHtml()
+        {
+            let text = document.querySelector("#myP").innerHTML;
+            document.querySelector("#demo").innerHTML = text;
+        }
+
+        function getinnerText()
+        {
+            let text = document.querySelector("#myP").innerText;
+            document.querySelector("#demo").innerText = text;
+        }
+
+
+        function gettextContent()
+        {
+            let text = document.querySelector("#myP").textContent;
+            document.querySelector("#demo").textContent = text;
+        }
+
+    </script>
+
+</body>
+</html>

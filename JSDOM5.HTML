@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The call Stack</h1>
+    <h1>Event loop</h1>
+    <h1>setTimeOut</h1>
+
+    <script>
+       /* a();
+        function a(){
+            console.log('print function a');
+            
+        }
+        function b() {
+            console.log('print function b');
+            a();
+            
+        }
+        a();
+        b();  */
+
+        // event loop
+        console.log('hi');
+        document.addEventListener('click' , function()
+    {
+        console.log('Hello');
+    });
+    console.log('xyz');
+
+    //setTimeOut --> use 5000 means 5 second
+    console.log('Settimmeout');
+    setTimeout (function(){
+        console.log('hey'); 
+    } ,5000); 
+
+    console.log('it take time as 5s');
+
+
+    </script>
+</body>
+</html>
